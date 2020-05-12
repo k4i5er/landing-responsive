@@ -1,0 +1,300 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 16px;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+#wrapper{
+  width: 100%;
+}
+
+#head{
+  /* Degradado e imagen */
+  background: rgba(102,85,151,1);
+  background: -moz-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(102,85,151,1)), color-stop(100%, rgba(118,210,246,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+  background: url('../img/cover.png'), linear-gradient(135deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#665597', endColorstr='#76d2f6', GradientType=1 );
+  height: 100vh;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 52%, cover;
+  background-repeat: no-repeat;
+}
+
+#head-content{
+  width: 100%;
+}
+
+h1{
+  padding: 50px 0 30px 100px;
+  width: 57%;
+  font-size: 2.25rem;
+  color: white;
+}
+
+#form{
+  box-sizing: border-box;
+  width:55%;
+  padding-left: 100px;
+  font-size: 0.875rem;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"]{
+  display: block;
+  width: 90%;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.625rem;
+  margin-top: 0.9375rem;
+  border: 1px solid #cccccc;
+  color: #0c0c0c;
+  font-size: 0.875rem;
+}
+
+label{
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+input[type="checkbox"]{
+  margin-right: 0.3125rem;
+  margin-top: 1.875rem;
+  width: 1rem;
+  height: 1rem;
+  /* border-radius: 5px; */
+}
+
+button{
+  display: block;
+  margin-top: 3.125rem;
+  padding: 0.625rem 0.625rem;
+  background-color: #12e3c3;
+  border-radius: 0.4375rem;
+  border: 0.0625rem solid #5cade0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#top-button{
+  float: right;
+  margin: 2.5rem 6.25rem 0 0;
+  padding: 0.9375rem 3.125rem;
+}
+
+#main{
+  width: 85%;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #4b49d8;
+  font-size: 2.0625rem;
+  font-weight: 500;
+}
+
+#main {
+  color: black;
+  padding: 1.875rem 0.625rem;
+}
+
+#steps-description{
+  color: #7d8789;
+  font-size: 0.875rem;
+  margin: 1.25rem 0 1.875rem 0;
+  font-weight: medium;
+}
+
+fieldset{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-top: 2px solid #cccccc;
+}
+
+legend{
+  padding-right: 3.125rem;
+}
+
+.circle{
+  border-top: 4px solid #4b49d8;
+  border-right: 4px solid #4b49d8;
+  border-bottom: 4px solid #4b49d8;
+  border-left: transparent;
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  /* border-top-left-radius: 50%;  */
+  /* 1px solid #4b49d8; */
+  color: black;
+  display: inline-block;
+  text-align: center;
+  /* padding: 15px; */
+  /* transform: rotate(45deg); */
+}
+
+.numbers{
+  line-height: 2.875rem;
+  color: #0c0c0c;
+  transform: rotate(90deg);
+}
+
+/* Checkbox */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 2.1875rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  font-size: 1.375rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5625rem;
+  width: 1.5625rem;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.5625rem;
+  top: 0.3125rem;
+  width: 0.3125rem;
+  height: 0.625rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 960px){
+  
+}
+
+@media (max-width: 959px){
+  html{
+    font-size: 10px;
+  }
+
+  h1{
+    padding: 10px;
+    width: 90%;
+    font-size: 2.25rem;
+    color: white;
+    /* text-align: center; */
+    margin: 0 auto;
+  }
+  
+  #form{
+    width: 90%;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"]{
+    display: block;
+    width: 100%;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.625rem;
+    margin-top: 0.9375rem;
+    border: 1px solid #cccccc;
+    color: #0c0c0c;
+    font-size: 1.1rem;
+  }
+
+  #head{
+    /* Degradado e imagen */
+    background: rgba(102,85,151,1);
+    background: -moz-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(102,85,151,1)), color-stop(100%, rgba(118,210,246,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(102,85,151,1) 0%, rgba(118,210,246,1) 100%);
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#665597', endColorstr='#76d2f6', GradientType=1 );
+    height: 100vh;
+  }
+
+  form{
+    width: 100%;
+  }
+
+  #form > form > span{
+    display: block;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  form > label{
+    font-size: 1rem;
+  }
+
+
+  input[type="checkbox"]{
+    margin-right: 0.3125rem;
+    margin-top: 1.875rem;
+    font-size: 0.5rem;
+    width: 0.5rem !important;
+    height: 0.5rem !important;
+  }
+}
+
